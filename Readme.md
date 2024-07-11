@@ -1,6 +1,6 @@
-# Windows 11 Bootcamp Prepare Installer
+# Windows 11 Bootcamp Prepare Installer ES-ES Spanish Language
 
-A shell script to convert the Windows 11 ISO so Bootcamp will install it properly
+A shell script to convert the Windows 11 ES-ES ISO so Bootcamp will install it properly
 
 ## Description
 
@@ -12,14 +12,14 @@ This simple shell script combines the Microsoft Windows 10 and Windows 11 ISO fi
 
 ### Prerequisites
 
-* Windows 10 ISO file
-* Windows 11 ISO file
+* Windows 10 ES-ES ISO file
+* Windows 11 ES-ES ISO file
 
 ### Executing program
 
 #### Run with
 ```
-sudo ./prepare_installer.sh [-help] <Windows 10 ISO path> <Windows 11 ISO path>
+sudo ./prepare_installer.sh [-help] <Windows 10 ES-ES ISO path> <Windows 11 ES-ES ISO path>
 ```
 #### Windows Install Registry Edit Steps
 
