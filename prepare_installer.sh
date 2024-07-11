@@ -66,7 +66,7 @@ fi
 ##### EXECUTE
 
 # Create a DMG Image File.
-hdiutil create -o /tmp/Windows11.dmg -size 5500m -volname Windows11 -fs UDF;
+hdiutil create -o /tmp/Windows11.dmg -size 7000m -volname Windows11 -fs UDF;
 
 # Mount DMG to your Mac.
 hdiutil attach /tmp/Windows11.dmg -noverify -mountpoint /Volumes/Windows11;
@@ -75,19 +75,19 @@ hdiutil attach /tmp/Windows11.dmg -noverify -mountpoint /Volumes/Windows11;
 hdiutil mount $1;
 
 # Now copy all files except install.wim to Windows 11 volumes.
-rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_EN-US_DV9/ /Volumes/Windows11;
+rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_ES-ES_DV9/ /Volumes/Windows11;
 
 # Unmount Windows 10 ISO.
-hdiutil detach /Volumes/CCCOMA_X64FRE_EN-US_DV9/;
+hdiutil detach /Volumes/CCCOMA_X64FRE_ES-ES_DV9/;
 
 # Mount Microsoft Windows 11 ISO with provided path in argument two.
 hdiutil mount $2;
 
 # Copy Install.wim to Windows 11 Volumes with sudo commands.
-sudo cp /Volumes/CCCOMA_X64FRE_EN-US_DV9/sources/install.wim /Volumes/Windows11/sources/;
+sudo cp -v /Volumes/CCCOMA_X64FRE_ES-ES_DV9/sources/install.wim /Volumes/Windows11/sources/;
 
 # Unmount Windows 11.ISO Disk Image.
-hdiutil detach /Volumes/CCCOMA_X64FRE_EN-US_DV9/;
+hdiutil detach /Volumes/CCCOMA_X64FRE_ES-ES_DV9/;
 
 # Unmount Windows 11 Volumes.
 hdiutil detach /volumes/Windows11;
