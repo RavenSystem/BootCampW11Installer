@@ -75,19 +75,19 @@ hdiutil attach /tmp/Windows11.dmg -noverify -mountpoint /Volumes/Windows11;
 hdiutil mount $1;
 
 # Now copy all files except install.wim to Windows 11 volumes.
-rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_ES-ES_DV9/ /Volumes/Windows11;
+rsync -avh --progress --exclude=sources/install.wim /Volumes/CCCOMA_X64FRE_*_DV9/ /Volumes/Windows11;
 
 # Unmount Windows 10 ISO.
-hdiutil detach /Volumes/CCCOMA_X64FRE_ES-ES_DV9/;
+hdiutil detach /Volumes/CCCOMA_X64FRE_*_DV9/;
 
 # Mount Microsoft Windows 11 ISO with provided path in argument two.
 hdiutil mount $2;
 
 # Copy Install.wim to Windows 11 Volumes with sudo commands.
-sudo cp -v /Volumes/CCCOMA_X64FRE_ES-ES_DV9/sources/install.wim /Volumes/Windows11/sources/;
+sudo cp -v /Volumes/CCCOMA_X64FRE_*_DV9/sources/install.wim /Volumes/Windows11/sources/;
 
 # Unmount Windows 11.ISO Disk Image.
-hdiutil detach /Volumes/CCCOMA_X64FRE_ES-ES_DV9/;
+hdiutil detach /Volumes/CCCOMA_X64FRE_*_DV9/;
 
 # Unmount Windows 11 Volumes.
 hdiutil detach /volumes/Windows11;
@@ -96,11 +96,11 @@ hdiutil detach /volumes/Windows11;
 hdiutil convert /tmp/Windows11.dmg -format UDTO -o ~/Desktop/Windows11.cdr;
 
 # Move this image to your desktop.
-mv ~/Desktop/Windows11.cdr ~/Desktop/Windows11.iso;
+mv ~/Desktop/Windows11.cdr ~/Desktop/Win11_BootCamp.iso;
 
 # Delete Windows11.dmg in Temporary folder.
 rm /tmp/Windows11.dmg;
 
 # Print completion message.
-echo -e "Windows 11 ISO created at: ${green}$HOME/Desktop/Windows11.iso${nc}";
+echo -e "Windows 11 ISO created at: ${green}$HOME/Desktop/Win11_BootCamp.iso${nc}";
 echo -e "${green}PREPARE_INSTALLER COMPLETED SUCCESSFULLY${nc}";
