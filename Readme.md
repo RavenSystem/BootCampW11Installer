@@ -6,7 +6,7 @@ A shell script to convert the Windows 11 ISO so Bootcamp will install it properl
 
 This script is for getting around the `Bootcamp Stuck Downloading Support Software` and `Can’t install the software because it is not currently available from software update server` errors when trying to install Windows 11 via Bootcamp.
 
-This simple shell script combines the Microsoft Windows 10 and Windows 11 ISO files into a single Windows 11 ISO file that can be installed by MacOS Bootcamp. Running this script will create a `Windows11.iso` file on the Desktop. This file can then be given to Bootcamp to properly download the Apple Support Software and install Windows 11.
+This simple shell script combines the Microsoft Windows 10 and Windows 11 ISO files into a single Windows 11 ISO file that can be installed by MacOS Bootcamp. Running this script will create a `Win11_BootCamp.iso` file on the Desktop. This file can then be given to Bootcamp to properly download the Apple Support Software and install Windows 11.
 
 ## Getting Started
 
