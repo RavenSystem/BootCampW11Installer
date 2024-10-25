@@ -12,14 +12,14 @@ This simple shell script combines the Microsoft Windows 10 and Windows 11 ISO fi
 
 ### Prerequisites
 
-* Windows 10 ISO file
-* Windows 11 ISO file
+* [Windows 10 ISO file](https://www.microsoft.com/software-download/windows10ISO)
+* [Windows 11 ISO file](https://www.microsoft.com/software-download/windows11)
 
 ### Executing program
 
 #### Run with
 ```
-sudo ./prepare_installer.sh [-help] <Windows 10 ES-ES ISO path> <Windows 11 ES-ES ISO path>
+sudo ./prepare_installer.sh [-help] <Windows 10 ISO path> <Windows 11 ISO path>
 ```
 #### Windows Install Registry Edit Steps (Currently not needed)
 
